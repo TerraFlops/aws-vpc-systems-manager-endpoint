@@ -3,7 +3,7 @@ data "aws_vpc" "vpc" {
 }
 
 resource "aws_vpc_endpoint" "ssm" {
-  service_name = "com.amazonaws.ap-southeast-2.secretsmanager"
+  service_name = "com.amazonaws.ap-southeast-2.ssm"
   vpc_endpoint_type = "Interface"
   vpc_id = data.aws_vpc.vpc.id
   security_group_ids = var.security_group_ids
