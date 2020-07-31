@@ -20,3 +20,9 @@ variable "security_group_ids" {
   description = "IDs of security group(s) that will be applied to the endpoint"
   default = null
 }
+
+variable "private_dns_enabled" {
+  type = bool
+  description = "Boolean flag to enable private DNS"
+  default = false
+}
